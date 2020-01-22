@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+* {
+    font-family: 'Roboto';
+    outline: none;
+    color: white;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    height: 100vh;
+    
+    background: linear-gradient(to right, #aa4b6b, #6b6b83, #3b8d99);
+    
+    box-sizing: border-box;
+
+    color: white;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.wrapper input {
+    padding: 15px 20px;
+    width: 300px;
+    border-radius: 50px;
+    border: 1px white solid;
+    background: transparent;
+}
+
+.wrapper input::placeholder {
+    color: white;
+}
+
+.wrapper button {
+    cursor: pointer;
+
+    padding: 15px 50px;
+    margin-top: 20px;
+    background: transparent;
+    border: solid 1px white;
+    border-radius: 50px;
+}
+
+.wrapper button:hover {
+    background: white;
+    color: black;
+}
+
+
+/* Remove Arrows Input */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Remove Arros Input Firefox */
+input[type=number] {
+  -moz-appearance:textfield;
+}
+
+footer {
+    margin-top: 50px;
+}
