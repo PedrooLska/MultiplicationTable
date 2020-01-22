@@ -71,3 +71,7 @@ input[type=number] {
 footer {
     margin-top: 50px;
 }
+
+footer i {
+    color: red;
+}
