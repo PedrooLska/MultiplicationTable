@@ -1,5 +1,5 @@
 <h2>:computer: Projeto</h2>
-Projeto desenvolvido com base no curso do no qual ele propõe o desafio para desenvolver uma tabuada de multiplicação.
+Projeto desenvolvido com base no curso do Gustavo Guanabara no qual ele propõe o desafio para desenvolver uma tabuada de multiplicação.
 
 <h2>:rocket: Tecnologias</h2>
 
