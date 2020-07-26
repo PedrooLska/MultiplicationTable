@@ -5,9 +5,9 @@ Projeto desenvolvido com base no curso do Gustavo Guanabara no qual ele propõe 
 
 :white_check_mark: - HTML5
 
-:white_check_mark: - CSS3
+:white_check_mark: - CSS3 (BEM Architecture)
 
-:white_check_mark: - JavaScript (Class, This, IF/ELSE, FOR, Constructor)
+:white_check_mark: - JavaScript (Arrow Function, Template String, IF/ELSE, FOR, Style)
  
 
 
