@@ -1,6 +1,6 @@
-const result = document.querySelector('.result');
-const input = document.querySelector('input');
-const erro = document.querySelector('.erro');
+const result = document.querySelector('#result');
+const input = document.querySelector('#input');
+const erro = document.querySelector('#erro');
 const multiply = () => {
     if (validationNumber(input.value)) {
         erroMsg('');
@@ -25,7 +25,13 @@ const validationNumber = (num) => {
         clearInput();
     }
 }
-const erroMsg = (msg) => erro.innerHTML = `${msg}`
-const showResult = (valor, multiplicador, total) => result.innerHTML += `${valor} x ${multiplicador} = ${total}<br>`;
+const erroMsg = (msg) => {
+    erro.style.display = 'block'
+    erro.innerHTML = `${msg}`
+}
+const showResult = (valor, multiplicador, total) => {
+    result.style.display = 'block'
+    result.innerHTML += `${valor} x ${multiplicador} = ${total}<br>`
+};
 const clearResult = () => result.innerHTML = '';
 const clearInput = () => input.value = '';
