@@ -33,6 +33,16 @@ body {
     margin-bottom: 15px;
 }
 
+.content__erro,
+.content__result {
+    display: none;
+}
+
+.content__erro,
+.footer__icon {
+    color: red;
+}
+
 .content__input {
     padding: 15px 20px;
     width: 300px;
@@ -50,16 +60,6 @@ body {
 .content__input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
-}
-
-.content__erro,
-.content__result {
-    display: none;
-}
-
-.content__erro,
-.footer__icon {
-    color: red;
 }
 
 .content__button {
