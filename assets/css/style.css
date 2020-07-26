@@ -11,13 +11,9 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
     height: 100vh;
-    
     background: linear-gradient(to right, #aa4b6b, #6b6b83, #3b8d99);
-    
     box-sizing: border-box;
-
     color: white;
 }
 
@@ -43,13 +39,8 @@ body {
 /* Remove Arrows Input */
 .wrapper input::-webkit-outer-spin-button,
 .wrapper input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-/* Remove Arros Input Firefox */
-.wrapper input[type=number] {
-  -moz-appearance:textfield;
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 .wrapper .erro {
@@ -58,7 +49,6 @@ body {
 
 .wrapper button {
     cursor: pointer;
-
     padding: 15px 50px;
     margin-top: 20px;
     background: transparent;
@@ -71,6 +61,6 @@ body {
     color: black;
 }
 
-footer i {
+.footer__icon {
     color: red;
 }

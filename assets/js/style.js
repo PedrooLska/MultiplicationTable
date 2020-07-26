@@ -1,53 +1,31 @@
-class Multiply {
-    constructor() {
-        this.result = document.querySelector('.result');
-        this.input = document.querySelector('input');
-        this.erro = document.querySelector('.erro');
-    }
-
-    multiply() {
-        if (this.validationNumber(this.input.value)) {
-            this.erroMsg('');
-            this.clearResult();
-            for (let i = 0; i <= 10; i++) {
-                
-                let multiplicacao = this.input.value * i;
-                
-                this.showResult(this.input.value, i, multiplicacao)
-            }
-            this.clearInput();
+const result = document.querySelector('.result');
+const input = document.querySelector('input');
+const erro = document.querySelector('.erro');
+const multiply = () => {
+    if (validationNumber(input.value)) {
+        erroMsg('');
+        clearResult();
+        for (let i = 0; i <= 10; i++) {
+            let multiplicacao = input.value * i;
+            showResult(input.value, i, multiplicacao)
         }
-    }
-
-    validationNumber(num) {
-        if (num >= 1 && num <= 10) {
-            return true
-        } else if (num.length == 0) {
-            this.erroMsg('Por favor preencha o campo.');
-            this.clearResult();
-            this.clearInput();
-        } else {
-            this.erroMsg('Por favor preencha com números entre 1 é 10.');
-            this.clearResult();
-            this.clearInput();
-        }
-    }
-
-    erroMsg(msg) {
-        this.erro.innerHTML = `${msg}`;
-    }
-
-    showResult(valor, multiplicador, total) {
-        this.result.innerHTML += `${valor} x ${multiplicador} = ${total}<br>`;
-    }
-
-    clearResult() {
-        this.result.innerHTML = '';
-    }
-
-    clearInput() {
-        this.input.value = '';
+        clearInput();
     }
 }
-
-const newMultiply = new Multiply();
+const validationNumber = (num) => {
+    if (num >= 1 && num <= 10) {
+        return true
+    } else if (num.length == 0) {
+        erroMsg('Por favor preencha o campo.');
+        clearResult();
+        clearInput();
+    } else {
+        erroMsg('Por favor preencha com números entre 1 é 10.');
+        clearResult();
+        clearInput();
+    }
+}
+const erroMsg = (msg) => erro.innerHTML = `${msg}`
+const showResult = (valor, multiplicador, total) => result.innerHTML += `${valor} x ${multiplicador} = ${total}<br>`;
+const clearResult = () => result.innerHTML = '';
+const clearInput = () => input.value = '';
