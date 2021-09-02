@@ -46,3 +46,7 @@ const clearErrorAndResult = () => {
   clearError();
   clearResult();
 };
+const clearInputAndResult = () => {
+  clearInput();
+  clearResult();
+};
