@@ -1,77 +1,76 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto';
-    outline: none;
-    color: white;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto";
+  outline: none;
+  color: white;
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
-    background: linear-gradient(to right, #aa4b6b, #6b6b83, #3b8d99);
-    box-sizing: border-box;
-    color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background: linear-gradient(to right, #aa4b6b, #6b6b83, #3b8d99);
+  box-sizing: border-box;
+  color: white;
 }
 
 .content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .content__title,
 .content__button,
 .content__result,
 .content__erro {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+.content__input {
+  padding: 15px 20px;
+  width: 300px;
+  border-radius: 50px;
+  border: 1px white solid;
+  background: transparent;
+}
+
+.content__input::placeholder {
+  color: white;
+}
+
+.content__input::-webkit-outer-spin-button,
+.content__input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.content__button {
+  cursor: pointer;
+  padding: 15px 50px;
+  margin-top: 20px;
+  background: transparent;
+  border: solid 1px white;
+  border-radius: 50px;
+}
+
+.content__button:hover {
+  background: white;
+  color: black;
 }
 
 .content__erro,
 .content__result {
-    display: none;
+  display: none;
 }
 
 .content__erro,
 .footer__icon {
-    color: red;
-}
-
-.content__input {
-    padding: 15px 20px;
-    width: 300px;
-    border-radius: 50px;
-    border: 1px white solid;
-    background: transparent;
-}
-
-.content__input::placeholder {
-    color: white;
-}
-
-/* Remove Arrows Input */
-.content__input::-webkit-outer-spin-button,
-.content__input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-.content__button {
-    cursor: pointer;
-    padding: 15px 50px;
-    margin-top: 20px;
-    background: transparent;
-    border: solid 1px white;
-    border-radius: 50px;
-}
-
-.content__button:hover {
-    background: white;
-    color: black;
+  color: red;
 }

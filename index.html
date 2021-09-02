@@ -1,25 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Multiplication Table</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Tabuada Multiplicação</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-</head>
-
-<body>
+  <body>
     <section class="content">
-        <h1 class="content__title">Tabuada de Multiplicação</h1>
-        <input type="number" class="content__input" id="input" placeholder="Digite um número">
-        <button onclick="multiply()" class="content__button">Calcular</button>
-        <h2 class="content__result" id="result"></h2>
-        <h3 class="content__erro" id="erro"></h3>
+      <h1 class="content__title">Multiplication Table</h1>
+      <input
+        type="number"
+        class="content__input"
+        id="input"
+        placeholder="Enter a Number"
+      />
+      <button onclick="calculateMultiplyResult()" class="content__button">
+        Calculate
+      </button>
+      <h2 class="content__result" id="result"></h2>
+      <h3 class="content__erro" id="erro"></h3>
     </section>
-    <footer class="footer"><a>Desenvolvido por Pedro Lucas</a> <i class="footer__icon fas fa-heart"></i></footer>
+    <footer class="footer">
+      <a>Developer by Pedro Lucas</a>
+      <i class="footer__icon fas fa-heart"></i>
+    </footer>
     <script src="./assets/js/style.js"></script>
-</body>
-
+  </body>
 </html>
