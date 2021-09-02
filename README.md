@@ -7,7 +7,7 @@ Projeto desenvolvido com base no curso do Gustavo Guanabara no qual ele propõe 
 
 :white_check_mark: - CSS3 (BEM Architecture)
 
-:white_check_mark: - JavaScript (Arrow Function, Template String, IF/ELSE, FOR, Style)
+:white_check_mark: - JavaScript (Arrow Function, Template String, Destructuring, IF/ELSE, FOR, Style)
  
 
 
