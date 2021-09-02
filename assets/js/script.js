@@ -1,11 +1,11 @@
 const result = document.querySelector("#result");
 const input = document.querySelector("#input");
-const erro = document.querySelector("#erro");
+const error = document.querySelector("#erro");
 const calculateMultiply = () => {
   if (validationNumber(input.value)) {
     clearErrorAndResult();
-    const tableMultiplyResult = createTableMultiplyResult(input.value);
-    showResult(tableMultiplyResult);
+    const multiplicationResult = createMultiplicationsResults(input.value);
+    showMultiplicationsResults(multiplicationResult);
   }
 };
 const validationNumber = (num) => {
@@ -17,20 +17,20 @@ const validationNumber = (num) => {
   }
   clearInputAndResult();
 };
-const createTableMultiplyResult = (valueMultiply) => {
-  let tableMultiplyResult = "";
+const createMultiplicationsResults = (multiplicationValue) => {
+  let multiplicationsResults = "";
   for (let indexTable = 0; indexTable <= 10; indexTable++) {
-    let valueTotalMultiply = valueMultiply * indexTable;
-    let lineTableMultiplyResult = `${indexTable} x ${valueMultiply} = ${valueTotalMultiply}<br>`;
-    tableMultiplyResult += lineTableMultiplyResult;
+    let multiplicationResult = multiplicationValue * indexTable;
+    let lineMultiplicationResult = `${indexTable} x ${multiplicationValue} = ${multiplicationResult}<br>`;
+    multiplicationsResults += lineMultiplicationResult;
   }
-  return tableMultiplyResult;
+  return multiplicationsResults;
 };
 const errorMessage = (msg) => {
-  erro.style.display = "block";
-  erro.innerHTML = `${msg}`;
+  error.style.display = "block";
+  error.innerHTML = `${msg}`;
 };
-const showResult = (body) => {
+const showMultiplicationsResults = (body) => {
   result.style.display = "block";
   result.innerHTML = body;
   clearInput();
