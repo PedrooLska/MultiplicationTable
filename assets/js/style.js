@@ -5,7 +5,7 @@ const calculateMultiplyResult = () => {
   if (validationNumber(input.value)) {
     clearErrorAndResult();
     const multiplyResult = generateListMultiplyResult(input.value);
-    const bodyResult = generateBodyResult(multiplyResult);
+    const bodyResult = generateBodyMultiplyResult(multiplyResult);
     showResult(bodyResult);
   }
 };
@@ -32,7 +32,7 @@ const generateListMultiplyResult = (valueMultiply) => {
 
   return listResultMultiply;
 };
-const generateBodyResult = (listResultMultiply) => {
+const generateBodyMultiplyResult = (listResultMultiply) => {
   let bodyResult = "";
 
   listResultMultiply.forEach(({ indexTable, valueMultiply, valueTotal }) => {
@@ -54,6 +54,6 @@ const clearInput = () => (input.value = "");
 const clearResult = () => (result.innerHTML = "");
 const clearError = () => errorMessage("");
 const clearErrorAndResult = () => {
-  clearResult();
   clearError();
+  clearResult();
 };
