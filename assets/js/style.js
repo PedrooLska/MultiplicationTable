@@ -1,12 +1,11 @@
 const result = document.querySelector("#result");
 const input = document.querySelector("#input");
 const erro = document.querySelector("#erro");
-const calculateMultiplyResult = () => {
+const calculateMultiply = () => {
   if (validationNumber(input.value)) {
     clearErrorAndResult();
-    const multiplyResult = generateListMultiplyResult(input.value);
-    const bodyResult = generateBodyMultiplyResult(multiplyResult);
-    showResult(bodyResult);
+    const bodyMultiplyResult = createBodyMultiplyResult(input.value);
+    showResult(bodyMultiplyResult);
   }
 };
 const validationNumber = (num) => {
@@ -17,29 +16,14 @@ const validationNumber = (num) => {
     errorMessage("Please fill in numbers between 1 and 10.");
   }
 };
-const generateListMultiplyResult = (valueMultiply) => {
-  const listResultMultiply = [];
-
+const createBodyMultiplyResult = (valueMultiply) => {
+  let bodyTable = "";
   for (let indexTable = 0; indexTable <= 10; indexTable++) {
-    let valueTotal = valueMultiply * indexTable;
-    const objectMultiply = {
-      indexTable,
-      valueMultiply,
-      valueTotal,
-    };
-    listResultMultiply.push(objectMultiply);
+    let valueTotalMultiply = valueMultiply * indexTable;
+    let lineTableResult = `${indexTable} x ${valueMultiply} = ${valueTotalMultiply}<br>`;
+    bodyTable += lineTableResult;
   }
-
-  return listResultMultiply;
-};
-const generateBodyMultiplyResult = (listResultMultiply) => {
-  let bodyResult = "";
-
-  listResultMultiply.forEach(({ indexTable, valueMultiply, valueTotal }) => {
-    bodyResult += `${indexTable} x ${valueMultiply} = ${valueTotal}<br>`;
-  });
-
-  return bodyResult;
+  return bodyTable;
 };
 const errorMessage = (msg) => {
   erro.style.display = "block";
