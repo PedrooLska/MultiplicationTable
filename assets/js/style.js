@@ -4,8 +4,8 @@ const erro = document.querySelector("#erro");
 const calculateMultiply = () => {
   if (validationNumber(input.value)) {
     clearErrorAndResult();
-    const bodyMultiplyResult = createBodyMultiplyResult(input.value);
-    showResult(bodyMultiplyResult);
+    const tableMultiplyResult = createTableMultiplyResult(input.value);
+    showResult(tableMultiplyResult);
   }
 };
 const validationNumber = (num) => {
@@ -15,15 +15,16 @@ const validationNumber = (num) => {
   } else {
     errorMessage("Please fill in numbers between 1 and 10.");
   }
+  clearInputAndResult();
 };
-const createBodyMultiplyResult = (valueMultiply) => {
-  let bodyTable = "";
+const createTableMultiplyResult = (valueMultiply) => {
+  let tableMultiplyResult = "";
   for (let indexTable = 0; indexTable <= 10; indexTable++) {
     let valueTotalMultiply = valueMultiply * indexTable;
-    let lineTableResult = `${indexTable} x ${valueMultiply} = ${valueTotalMultiply}<br>`;
-    bodyTable += lineTableResult;
+    let lineTableMultiplyResult = `${indexTable} x ${valueMultiply} = ${valueTotalMultiply}<br>`;
+    tableMultiplyResult += lineTableMultiplyResult;
   }
-  return bodyTable;
+  return tableMultiplyResult;
 };
 const errorMessage = (msg) => {
   erro.style.display = "block";
@@ -39,5 +40,9 @@ const clearResult = () => (result.innerHTML = "");
 const clearError = () => errorMessage("");
 const clearErrorAndResult = () => {
   clearError();
+  clearResult();
+};
+const clearInputAndResult = () => {
+  clearInput();
   clearResult();
 };
